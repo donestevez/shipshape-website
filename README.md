@@ -8,7 +8,7 @@ After you edit anything, save the file and refresh the browser.
 
 ## Change your details
 Edit **`site-config.js`** in Notepad or any text editor. It holds everything:
-phone, email, towns, services, About text, guarantee, search title and description, and photos.
+phone, email, Instagram and Facebook links, towns, services, About text, guarantee, search title and description, and photos.
 
 - Anything in `[square brackets]` is a placeholder. Replace it before publishing. The form won't send until `formEndpoint` is filled in.
 - Leave `phone: ""` empty to hide the call buttons. Add a number and tap-to-call buttons appear automatically.
