@@ -11,6 +11,9 @@
   var IG_ICON =
     '<svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg>';
 
+  var FB_ICON =
+    '<svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 7.5h-1.5A2.5 2.5 0 0 0 12 10v11M9.5 13h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+
   var MAIL_ICON =
     '<svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 7.5l8 5.5 8-5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
 
@@ -154,6 +157,21 @@
     ai.innerHTML = showAboutIg ? igLink("See my recent work on Instagram") : "";
     ai.hidden = !showAboutIg;
 
+    // Facebook: accepts the full page link or just the page name
+    var fbRaw = String(cfg.facebook || "").trim();
+    var fbUrl = "";
+    if (fbRaw && !hasPlaceholder(fbRaw)) {
+      fbUrl = /^(https?:\/\/)?([a-z0-9-]+\.)?(facebook|fb)\.com\//i.test(fbRaw)
+        ? fbRaw.replace(/^(https?:\/\/)?/i, "https://")
+        : "https://www.facebook.com/" + encodeURIComponent(fbRaw.replace(/^@/, "").replace(/[\/?#].*$/, "")) + "/";
+    }
+    var ff = $("#footer-facebook");
+    ff.innerHTML = fbUrl
+      ? '<a href="' + esc(fbUrl) + '" target="_blank" rel="noopener">' + FB_ICON +
+        '<span>Facebook</span><span class="sr-only"> (opens Facebook in a new tab)</span></a>'
+      : "";
+    ff.hidden = !fbUrl;
+
     // Structured data for search engines (skips anything still a placeholder)
     var ld = {
       "@context": "https://schema.org",
@@ -163,7 +181,8 @@
     };
     if (phone) ld.telephone = phone;
     if (cfg.email && !hasPlaceholder(cfg.email)) ld.email = cfg.email;
-    if (igUrl) ld.sameAs = [igUrl];
+    var sameAs = [igUrl, fbUrl].filter(Boolean);
+    if (sameAs.length) ld.sameAs = sameAs;
     if (cfg.legalName) ld.legalName = cfg.legalName;
     var ldEl = $("#ld-json") || document.head.appendChild(Object.assign(document.createElement("script"), { id: "ld-json", type: "application/ld+json" }));
     ldEl.textContent = JSON.stringify(ld);

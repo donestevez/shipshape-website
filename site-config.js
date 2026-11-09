@@ -36,6 +36,11 @@ window.SITE = {
   // Change to true once you've posted some work.
   instagramInAbout: false,
 
+  // Your Facebook page. Paste the full link (e.g.
+  // "https://www.facebook.com/yourpage") or just the page name.
+  // Shown in the footer. Set to "" to hide the Facebook link.
+  facebook: "https://www.facebook.com/shipshapehandymanfl",
+
   // WHERE ESTIMATE REQUESTS GO. The form sends straight to your inbox
   // through Formspree (the free plan has a monthly request limit).
   //   1. Sign up at https://formspree.io with your "estimates@" address
