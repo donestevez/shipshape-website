@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Search and link-preview text. Link previews (texts, Facebook) read
+       these lines directly, so if you change seoTitle or seoDescription in
+       site-config.js, copy the same words here too. -->
+  <title>Shipshape Handyman | Handyman in Orlando</title>
+  <meta name="description" content="Handyman repairs, mounting, and carpentry in Orlando. Fix a sticking door, patch drywall, mount a TV, or hang shelves. Request an estimate from your phone.">
+  <meta name="theme-color" content="#0A1F36">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Shipshape Handyman">
+  <meta property="og:title" content="Shipshape Handyman | Handyman in Orlando">
+  <meta property="og:description" content="Handyman repairs, mounting, and carpentry in Orlando. Fix a sticking door, patch drywall, mount a TV, or hang shelves. Request an estimate from your phone.">
+  <!-- Preview image. If you move to your own domain, change this to
+       https://yourdomain.com/assets/shipshape-logo.png -->
+  <meta property="og:image" content="https://donestevez.github.io/shipshape-website/assets/shipshape-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@87.5,600..800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site-config.js"></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">
+        <img src="assets/shipshape-logo.svg" alt="Shipshape Handyman, home" width="1488" height="318">
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li data-needs-projects hidden><a href="#work">Recent work</a></li>
+          <li><a href="#about">About &amp; area</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost btn-sm" data-call data-call-style="icon" hidden></a>
+        <a class="btn btn-primary btn-sm" href="#estimate">
+          <span class="label-long">Request an estimate</span><span class="label-short" aria-hidden="true">Estimate</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- OPENING ======================================================= -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Let’s get your home in <span class="accent-word">shipshape.</span></h1>
+          <p class="lede" id="hero-sentence"></p>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-lg" href="#estimate">Request an estimate</a>
+            <a class="btn btn-outline btn-lg" data-call data-call-style="full" hidden></a>
+          </div>
+          <p class="hero-promise" id="hero-promise" hidden></p>
+        </div>
+
+        <aside class="log-card" aria-labelledby="how-title">
+          <h2 id="how-title">How it works</h2>
+          <ol class="steps">
+            <li><span class="step-num" aria-hidden="true">1</span><span><strong>Tell me about the job.</strong> A sentence or two is plenty.</span></li>
+            <li><span class="step-num" aria-hidden="true">2</span><span><strong>I’ll get back to you</strong> with questions or a price.</span></li>
+            <li><span class="step-num" aria-hidden="true">3</span><span><strong>We pick a time</strong> that works for you.</span></li>
+          </ol>
+        </aside>
+      </div>
+      <svg class="hero-wave" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <path d="M0 12 C 100 2, 200 22, 300 12 S 500 2, 600 12 S 800 22, 900 12 S 1100 2, 1200 12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      </svg>
+    </section>
+
+    <!-- SERVICES ====================================================== -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title">What I can help with</h2>
+          <p class="section-intro">Here’s the kind of work I take on. Don’t see your job? Describe it in the estimate form and I’ll tell you honestly if it’s a fit.</p>
+          <p class="pick-hint" id="pick-hint">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-.5V4a1.5 1.5 0 0 1 3 0v6m0-1.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-.6a6 6 0 0 1-4.6-2.2L3.6 15a1.6 1.6 0 0 1 2.4-2.1L9 15.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Pick any job below to start your estimate with it filled in.
+          </p>
+        </div>
+        <div class="service-grid" id="service-list"></div>
+      </div>
+    </section>
+
+    <!-- RECENT WORK (shown only when photos are listed in site-config.js) -->
+    <section class="section section-alt" id="work" aria-labelledby="work-title" hidden>
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Recent work</p>
+          <h2 id="work-title">A few jobs I’ve wrapped up</h2>
+        </div>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT & SERVICE AREA ========================================= -->
+    <section class="section section-alt" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2 id="about-title">Your local handyman</h2>
+          <div id="about-text"></div>
+          <div class="guarantee" id="guarantee" hidden></div>
+          <p class="ig-link" id="about-instagram" hidden></p>
+        </div>
+        <div class="area-card" aria-labelledby="area-title">
+          <h3 id="area-title">
+            <svg class="anchor-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a3 3 0 0 0-1 5.83V9H8v2h3v8.93A7 7 0 0 1 5.07 14H7l-3-4-3 4h2.05A9 9 0 0 0 12 22a9 9 0 0 0 8.95-8H23l-3-4-3 4h1.93A7 7 0 0 1 13 19.93V11h3V9h-3V7.83A3 3 0 0 0 12 2Zm0 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z" fill="currentColor"/></svg>
+            Towns I serve
+          </h3>
+          <ul class="town-list" id="town-list"></ul>
+          <p class="area-note" id="area-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTIMATE REQUEST ============================================= -->
+    <section class="section estimate" id="estimate" aria-labelledby="estimate-title">
+      <div class="wrap estimate-grid">
+        <div class="section-head estimate-head">
+          <p class="eyebrow">Get in touch</p>
+          <h2 id="estimate-title">Request an estimate</h2>
+          <p class="section-intro">Tell me a little about the job and I’ll get back to you with questions or a price.</p>
+          <p class="tip">Have photos of the problem? Mention it in your message, and I’ll ask for them when I reply.</p>
+          <p class="call-alt" id="call-alt" hidden>Rather talk it through? <a data-call data-call-style="text"></a></p>
+        </div>
+
+        <form class="estimate-form" id="estimate-form" novalidate>
+          <div class="form-fields" id="form-fields">
+          <div class="form-errors" id="form-errors" role="alert" tabindex="-1" hidden></div>
+
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required maxlength="80" aria-describedby="f-name-err">
+            <p class="field-error" id="f-name-err" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="f-town">Town or ZIP code</label>
+            <input id="f-town" name="town" type="text" autocomplete="address-level2" required maxlength="60" aria-describedby="f-town-err">
+            <p class="field-error" id="f-town-err" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="f-contact">Phone or email</label>
+            <p class="hint" id="f-contact-hint">However you’d like me to reach you.</p>
+            <input id="f-contact" name="contact" type="text" autocomplete="tel" required maxlength="100" aria-describedby="f-contact-hint f-contact-err">
+            <p class="field-error" id="f-contact-err" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="f-job">What needs doing?</label>
+            <p class="hint" id="f-job-hint">For example: “Back door sticks at the top and won’t latch.”</p>
+            <textarea id="f-job" name="job" rows="5" required maxlength="1200" aria-describedby="f-job-hint f-job-err"></textarea>
+            <p class="field-error" id="f-job-err" hidden></p>
+          </div>
+
+          <!-- Spam trap: hidden from people, bots fill it in and get ignored -->
+          <div class="hp" aria-hidden="true">
+            <label for="f-company">Leave this empty</label>
+            <input id="f-company" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="btn btn-primary btn-lg btn-block" type="submit" id="send-btn">Send request</button>
+          <p class="form-note">I’ll reply using the phone number or email you give me.</p>
+
+          <div class="send-result send-fail" id="send-fail" tabindex="-1" hidden>
+            <h3>Your request didn’t go through</h3>
+            <p id="fail-reason"></p>
+            <p>Everything you typed is still in the form. Press <strong>Send request</strong> to try again.</p>
+            <p id="fail-alt" hidden></p>
+          </div>
+          </div>
+
+          <div class="send-result send-ok" id="send-ok" tabindex="-1" hidden>
+            <h3>Got it, thanks!</h3>
+            <p>Your request came through. I’ll get back to you at <strong id="ok-contact"></strong>.</p>
+            <button class="btn btn-outline btn-sm" type="button" id="new-request">Send another request</button>
+          </div>
+
+          <p class="sr-only" id="send-live" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <img class="footer-logo" src="assets/shipshape-logo-reversed.svg" alt="Shipshape Handyman" width="1488" height="318">
+      <div class="footer-contact">
+        <p><a data-call data-call-style="text" hidden></a></p>
+        <p><a class="icon-link" id="footer-email"></a></p>
+        <p class="ig-link" id="footer-instagram" hidden></p>
+        <p class="footer-area" id="footer-area"></p>
+      </div>
+      <p class="footer-legal">© <span id="year">2026</span> <span id="legal-name">Shipshape Handyman LLC</span></p>
+    </div>
+  </footer>
+
+  <!-- Phone-only bar: slides up after the top buttons scroll away -->
+  <div class="mobile-cta" id="mobile-cta">
+    <a class="btn btn-outline" data-call data-call-style="bar" hidden></a>
+    <a class="btn btn-primary" href="#estimate">Request an estimate</a>
+  </div>
+
+  <noscript>
+    <div class="noscript">This page needs JavaScript turned on to show services and the estimate form.</div>
+  </noscript>
+</body>
+</html>
